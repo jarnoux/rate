@@ -34,13 +34,3 @@ Rate.prototype.getFrequency = function () {
 };
 
 module.exports = Rate;
-
-
-var rate = new Rate(3000),
-	tic = Date.now();
-for (var j = 0; j < 100000; j++) {
-	rate.getFrequency();
-}
-
-console.log('[rate.js:36] rate: ' + rate.getFrequency());
-console.log('[rate.js:36] enlapsed: ' + ( Date.now() - tic));
